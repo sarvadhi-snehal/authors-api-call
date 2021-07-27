@@ -11,22 +11,22 @@ function Navbar() {
       </div>
     <input type="checkbox" id="navCheck" style={{display:"none"}} />
 
-      <ul className="nav-links">
-        <li className="nav-link">
+      <ul className="navLinks">
+        <li className="navLink">
           <NavLink to="/">Home</NavLink>
         </li>
-        <li className="nav-link">
+        <li className="navLink">
           <NavLink to="/about">About</NavLink>
         </li>
-        <li className="nav-link">
+        <li className="navLink">
           <NavLink to="/authors">Authors</NavLink>
         </li>
-        <li className="nav-link">
+        <li className="navLink">
           <NavLink to="/addauthor">Add Author</NavLink>
         </li>
       
       </ul>
-    <label className="nav-label" htmlFor="navCheck"><FaBars /></label>
+      <label className="nav-label" htmlFor="navCheck"><FaBars /></label>
 
     </nav>
   

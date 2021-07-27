@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./AddForm.scss";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { addAuthor, updateAuthor } from "../../redux/index";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 function AddForm() {
   const [id, setId] = useState("");
@@ -13,10 +13,12 @@ function AddForm() {
   const [isUpdate, setIsUpdate] = useState(true);
   const dispatch = useDispatch();
   const location = useLocation();
+  const history = useHistory();
 
   const handleSubmit = (e) => {
    
     e.preventDefault();
+
     let author = {
       id: parseInt(id),
       bookId: bookId,
@@ -37,6 +39,9 @@ function AddForm() {
     setFirstName("");
     setLastName("");
     setIsUpdate(true);
+    history.push({
+      pathname: '/authors'
+    })
   };
 
   useEffect(() => {
@@ -57,7 +62,7 @@ function AddForm() {
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="id">Id</label>
-        <input
+        <input required={true}
           type="number"
           name="id"
           id="id"
@@ -68,7 +73,7 @@ function AddForm() {
 
       <div className="form-group">
         <label htmlFor="book-id">Book Id</label>
-        <input
+        <input required={true}
           type="text"
           name="book-id"
           id="book-id"
@@ -79,7 +84,7 @@ function AddForm() {
 
       <div className="form-group">
         <label htmlFor="name">First Name</label>
-        <input
+        <input required={true}
           type="text"
           name="name"
           id="name"
@@ -90,7 +95,7 @@ function AddForm() {
 
       <div className="form-group">
         <label htmlFor="last-name">Last Name</label>
-        <input
+        <input required={true}
           type="text"
           name="last-name"
           id="last-name"
@@ -98,7 +103,7 @@ function AddForm() {
           onChange={(e) => setLastName(e.target.value)}
         />
       </div>
-      <input
+      <input 
             type="submit"
             className="btn btn-primary"
             value={isUpdate ? "save" : "update"}

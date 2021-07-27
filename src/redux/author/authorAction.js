@@ -2,7 +2,8 @@ import {
     ADD_AUTHOR,
 DELETE_AUTHOR,
 UPDATE_AUTHOR,
-GET_AUTHOR
+GET_AUTHOR,
+RESET_VAL
 } from './authorTypes';
 import axios from 'axios'
 const api = axios.create({baseUrl: "https://reqres.in/api/users/" })
@@ -57,4 +58,11 @@ export const getAuthor = (authors) =>{
 
 }
 
+
+export const resetVal = () =>{
+    return {
+        type :RESET_VAL,
+        info :"reset validation"
+    }
+}
 

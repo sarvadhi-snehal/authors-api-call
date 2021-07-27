@@ -6,6 +6,8 @@
 
 a,li,button{
  all: unset;
+ list-style: none;
+ text-decoration: none;
 }
  a,button{
    cursor: pointer;

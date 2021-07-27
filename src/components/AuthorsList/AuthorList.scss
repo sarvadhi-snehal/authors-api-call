@@ -6,6 +6,14 @@
    @include flexView(center, center);
  
     width:100%;
+    .hide{
+        display:none;
+    }
+    .alert{
+        position:absolute;
+        top:4rem;
+        right:4rem;
+    }
     table{
        width:100%;
        
@@ -31,15 +39,15 @@
                 td{
 
                    button{
-                       padding:1rem;
+                       padding:0.3rem 0.5rem;
                        font-size: 1rem;
-                        background-color:red;
-                        width:3rem;
-                margin:0 0.5rem 0 0;
+                        background-color:rgb(243, 138, 138);
+                        width:3.5rem;
+                margin:0.5rem;
                     border-radius: 10px;
                    }
                    .btn-upd{
-                       background-color:blue
+                       background-color:rgb(118, 118, 247)
                    }
                    
                 }

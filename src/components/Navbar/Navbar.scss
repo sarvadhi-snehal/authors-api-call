@@ -1,29 +1,32 @@
 @import '../../scss/flex';
 nav {
     @include flexView(center,space-between);
-        padding: 0 0.5rem;
+        // padding: 0 0.5rem;
        width: 100%;
        background-color:rgb(245, 180, 180); 
-
+    // padding-top: 0.5rem;
        position: relative;
-       padding: 1rem;
+        .logo{
+    @include flexView(center,center);
+        padding-top: 0.5rem
+        }
        .nav-label{
            display:none
        }
     ul{
        
         @include flexView(center,center);
-       
-       
+        padding-top: 0.5rem;
+    //    background-color:rgb(121, 16, 16);
         background-color:rgb(245, 180, 180); 
-
         width: 100%;
   
         li{
-            padding:0 0.5rem;
+            padding:0 1rem;
             font-size: 1.2rem;
             a{
-                color: rgba(82, 82, 82, 0.6)
+                color: rgba(82, 82, 82, 0.6);
+                text-decoration: none;
             }
             a:hover{
                 color: rgba(82, 82, 82, 1)
@@ -42,6 +45,7 @@ nav {
    nav{
     .nav-label{
         display:block;
+        padding: 0;
     }
     #navCheck:checked ~ ul{
         transform: scale(1);
@@ -58,7 +62,7 @@ nav {
         top: 3.2rem;
         left:0;
         @include flexView(flex-start,space-between);
-        padding:1rem;
+        // padding:1rem;
       
         li{
             margin-top:1rem;
