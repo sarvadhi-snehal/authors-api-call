@@ -1,0 +1,15 @@
+@import './flex.scss';
+
+section{
+    @include flexView(center,center);
+    flex-direction: column;
+    width: 80%;
+    margin:0 auto;
+    .btn{
+        padding:0.5rem;
+        background-color:rgb(49, 170, 49);
+        font-size: 1.2rem;
+        color:#fff;
+        align-self: flex-end;
+    }
+}

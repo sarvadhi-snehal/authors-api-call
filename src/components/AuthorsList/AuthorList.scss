@@ -1,0 +1,50 @@
+@import '../../scss/flex.scss';
+
+.authorList{
+   padding:1rem;
+   margin:0 auto;
+   @include flexView(center, center);
+ 
+    width:100%;
+    table{
+       width:100%;
+       
+        thead{
+            tr{
+             font-size: 1rem;
+            //  border: 1px solid #000;
+               
+              th{
+                background: rgba(211, 201, 201, 0.5);
+                padding:1rem;
+              }
+            }
+        }
+        .author{
+            tr{
+            
+                margin: 0.5rem;
+                &:hover{
+                    background-color:rgba(240, 150, 150, 0.1)
+
+                }
+                td{
+
+                   button{
+                       padding:1rem;
+                       font-size: 1rem;
+                        background-color:red;
+                        width:3rem;
+                margin:0 0.5rem 0 0;
+                    border-radius: 10px;
+                   }
+                   .btn-upd{
+                       background-color:blue
+                   }
+                   
+                }
+            }
+        }
+    }
+    
+}

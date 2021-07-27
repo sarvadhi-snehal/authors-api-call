@@ -1,0 +1,73 @@
+@import '../../scss/flex';
+nav {
+    @include flexView(center,space-between);
+        padding: 0 0.5rem;
+       width: 100%;
+       background-color:rgb(245, 180, 180); 
+
+       position: relative;
+       padding: 1rem;
+       .nav-label{
+           display:none
+       }
+    ul{
+       
+        @include flexView(center,center);
+       
+       
+        background-color:rgb(245, 180, 180); 
+
+        width: 100%;
+  
+        li{
+            padding:0 0.5rem;
+            font-size: 1.2rem;
+            a{
+                color: rgba(82, 82, 82, 0.6)
+            }
+            a:hover{
+                color: rgba(82, 82, 82, 1)
+
+            }
+        }
+        
+    }
+
+  
+}
+
+
+
+@media only screen and (max-width: 668px){
+   nav{
+    .nav-label{
+        display:block;
+    }
+    #navCheck:checked ~ ul{
+        transform: scale(1);
+           
+    }    
+    ul{
+    //    background-color:red; 
+    @include flexView(flex-end,space-between);
+
+        transform: scale(0);
+        flex-direction:column;
+        position:absolute;
+        background-color:blue;
+        top: 3.2rem;
+        left:0;
+        @include flexView(flex-start,space-between);
+        padding:1rem;
+      
+        li{
+            margin-top:1rem;
+
+            
+        }
+
+    }
+
+   } 
+   
+}
