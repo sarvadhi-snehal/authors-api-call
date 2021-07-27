@@ -52,7 +52,7 @@ function AuthorsList() {
                   className="alert alert-danger alert-dismissible fade show"
                   role="alert" >
                   <strong>
-                    <FaTrash /> You have successfully deleted author
+                    <FaTrash /> Author has been deleted successfully.
                   </strong>
                   <button
                     type="button"
@@ -69,7 +69,7 @@ function AuthorsList() {
           className="alert alert-warning alert-dismissible fade show"
           role="alert"
         >
-          <strong> < GrUpdate />  you have updated author uccessfully</strong>
+          <strong> < GrUpdate />Author has been updated successfully.</strong>
           <button
             type="button"
             className="btn-close"
@@ -84,7 +84,7 @@ function AuthorsList() {
           className="alert alert-success alert-dismissible fade show"
           role="alert"
         >
-          <strong><FaThumbsUp />You have successfully added new Author</strong>
+          <strong><FaThumbsUp />Author has been added successfully.</strong>
           <button
             type="button"
             className="btn-close"
@@ -144,6 +144,8 @@ function AuthorsList() {
           }
         </table>
       )}
+
+
     </div>
   );
 }
