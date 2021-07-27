@@ -103,12 +103,12 @@ function AddForm() {
           onChange={(e) => setLastName(e.target.value)}
         />
       </div>
-      <input 
+      <button 
             type="submit"
-            className="btn btn-primary"
-            value={isUpdate ? "save" : "update"}
+            className="btnAdd"
+            
             aria-label="submit"
-          />
+          >{isUpdate ? "save" : "update"}</button>
     </form>
   );
 }

@@ -4,6 +4,7 @@ function Home() {
     return (
         <div>
             home
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ab?</p>
         </div>
     )
 }
